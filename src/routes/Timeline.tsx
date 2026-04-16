@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CheckBox from "../components/Checkbox";
-import { Button } from "@headlessui/react";
+import Button from "../components/Button";
 import { categories, months, years } from "../constants";
 
 const Timeline = () => {
@@ -33,17 +33,15 @@ const Timeline = () => {
           );
         })}
         <Button
-          className="bg-yellow-200 text-teal-800 px-2 rounded-md cursor-pointer"
-          onClick={() => {
-            setVisibleCategories(categories);
-          }}
-        >
-          Reset
-        </Button>
+          label="Reset"
+          onClick={() => setVisibleCategories(categories)}
+        />
+
+        <Button label="Remove all" onClick={() => setVisibleCategories([])} />
       </div>
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto pr-2">
         <div className="grid w-full grid-cols-13 auto-rows-[60px] gap-3 pb-3">
-          <div>Year</div>
+          <div></div>
           {months.map((m, index) => {
             return <div key={index}>{m}</div>;
           })}
@@ -120,6 +118,13 @@ const Timeline = () => {
             <>
               <div className="bg-cyan-600 col-start-2 col-end-13 row-start-13 opacity-60">
                 Co-organiser at Effective Altruism Bristol
+              </div>
+              <div className="bg-indigo-500 col-start-13 row-start-13">
+                Guest at CEEALAR
+              </div>
+              <div className="bg-indigo-500 col-start-2 row-start-14"></div>
+              <div className="bg-orange-500 col-start-3 row-start-14 col-end-5">
+                Member of EA Hub, Vietnam
               </div>
             </>
           )}
