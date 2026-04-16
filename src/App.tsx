@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import NavBar from "./components/NavBar";
-import Professional from "./routes/Professional";
+import Timeline from "./routes/Timeline";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
   <div className="h-full">
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/professional" element={<Professional />} />
+      <Route path="/career" element={<Timeline />} />
     </Routes>
   </div>
 </main>
