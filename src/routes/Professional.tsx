@@ -1,3 +1,5 @@
+import Test from "./Test";
+
 type ItemType = {
   years: string;
   jobTitle: string;
@@ -109,12 +111,13 @@ const NonProfessionalTimeline = () => {
 
 const Professional = () => {
   return (
-    <div className="h-screen overflow-hidden grid grid-cols-3">
-      <NonProfessionalTimeline />
+    <div className="h-screen overflow-hidden grid grid-cols-3 text-yellow-200">
+      <Test />
+      {/* <NonProfessionalTimeline />
       <div className="col-start-2 flex justify-center">
         <div className="w-2 bg-yellow-200 h-full"></div>
       </div>
-      <ProfessionalTimeline />
+      <ProfessionalTimeline /> */}
     </div>
   );
 };
