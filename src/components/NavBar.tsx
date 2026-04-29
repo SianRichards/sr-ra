@@ -7,7 +7,6 @@ const NavBar = () => {
       <Header />
       <div className="flex flex-col text-xl">
         <Link to="/">Home {">>"}</Link>
-        <Link to="/about">About {">>"}</Link>
         <Link to="/career">Career timeline {">>"}</Link>
         <Link to="/projects">Projects {">>"}</Link>
       </div>
