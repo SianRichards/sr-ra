@@ -3,27 +3,28 @@
 
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import PolicyCase from "../components/PolicyCase";
+import Faunalytics from "../components/Faunalytics";
 
 const Projects = () => {
   return (
     <div className="flex flex-col h-screen text-yellow-200 pl-2">
-      <TabGroup className="h-[94%] mt-3">
-        <TabList className="flex gap-2 bg-none">
+      <TabGroup className="flex flex-col flex-1 mt-3 text-xl min-h-0">
+        <TabList className="flex gap-2">
           <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 px-3">
             Policy Case
           </Tab>
           <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 px-3">
             Faunalytics
           </Tab>
-          <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 px-3">
-            Myth buster
-          </Tab>
         </TabList>
-        <TabPanels className="bg-gray-500 h-full rounded-b-md p-2 mr-2 rounded-r-md">
-          <TabPanel><PolicyCase /></TabPanel>
-          <TabPanel>Test 2</TabPanel>
-          <TabPanel>Test 3</TabPanel>
-          <TabPanel>Test 4</TabPanel>
+
+        <TabPanels className="bg-gray-500 flex-1 min-h-0 overflow-y-auto rounded-b-md p-2 mr-2 rounded-r-md mb-3">
+          <TabPanel>
+            <PolicyCase />
+          </TabPanel>
+          <TabPanel>
+            <Faunalytics />
+          </TabPanel>
         </TabPanels>
       </TabGroup>
     </div>

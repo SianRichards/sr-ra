@@ -9,6 +9,7 @@ const PolicyCase = () => {
         Animal Welfare Enforcement in the UK: Risk-Based and Technology-led
         Approaches
       </h1>
+      <hr className="border-t border-yellow-200" />
 
       <a
         href={policyPdf}
