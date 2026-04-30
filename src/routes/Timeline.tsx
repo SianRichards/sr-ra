@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CheckBox from "../components/Checkbox";
 import Button from "../components/Button";
-import { categories, modalContents, months, years } from "../constants";
+import { categories, modalContents, months, years } from "../constants/index";
 import clsx from "clsx";
 import Modal from "../components/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +10,7 @@ import { faCircleInfo } from "@fortawesome/free-solid-svg-icons/faCircleInfo";
 const Timeline = () => {
   const [visibleCategories, setVisibleCategories] = useState(categories);
   const [activeModal, setActiveModal] = useState<null | {
+    identifier: string;
     title: string;
     description: string;
   }>(null);
@@ -33,7 +34,7 @@ const Timeline = () => {
   const hasOther = show("Other");
 
   const handleModal = (title: string) => {
-    const content = modalContents.find((e) => e.title === title);
+    const content = modalContents.find((e) => e.identifier === title);
     if (content) setActiveModal(content);
   };
 
