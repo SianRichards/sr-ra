@@ -20,7 +20,7 @@ const PolicyCase = () => {
         Policy case
       </a>
 
-      <ul className="flex flex-col gap-5 text-justify">
+      <ul className="flex flex-col gap-5 text-justify pr-42">
         <li>
           <span className="font-bold block">The Enforcement Problem</span>
           <p>

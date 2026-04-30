@@ -158,13 +158,16 @@ const Timeline = () => {
               </div>
               <div
                 className={clsx(
-                  "bg-pink-300 col-start-13 row-start-13 text-black p-2 rounded-sm truncate",
+                  "bg-pink-300 col-start-13 row-start-13 text-black rounded-sm p-1",
                   hasEA && "h-1/2",
                 )}
               >
-                FutureKind Fellow at Electric Sheep
-                <InfoSymbol title="FutureKind Fellow at Electric Sheep" />
+                <div className="flex items-start justify-between gap-1 h-full">
+                  <span className="truncate">FutureKind Fellowship</span>
+                  <InfoSymbol title="FutureKind Fellow at Electric Sheep" />
+                </div>
               </div>
+
               <div
                 className={clsx(
                   "bg-pink-300 col-start-2 col-end-4 row-start-14 rounded-sm",
@@ -177,18 +180,24 @@ const Timeline = () => {
           {hasEA && (
             <>
               <div className="bg-teal-200/60 col-start-2 col-end-13 row-start-13 text-black p-2 rounded-sm">
-                Co-organiser at Effective Altruism Bristol
-                <InfoSymbol title="Co-organiser at Effective Altruism Bristol" />
+                <div className="flex items-start justify-between gap-1">
+                  <span className="truncate">
+                    Co-organiser at Effective Altruism Bristol
+                  </span>
+                  <InfoSymbol title="Co-organiser at Effective Altruism Bristol" />
+                </div>
               </div>
 
               <div
                 className={clsx(
-                  "bg-yellow-200 col-start-13 row-start-13 text-black p-2 rounded-sm truncate",
+                  "bg-yellow-200 col-start-13 row-start-13 text-black rounded-sm p-1",
                   hasAnimal && "h-1/2 self-end",
                 )}
               >
-                Guest at CEEALAR
-                <InfoSymbol title="Guest at CEEALAR" />
+                <div className="flex items-start justify-between gap-1 h-full">
+                  <span className="truncate">Guest at CEEALAR</span>
+                  <InfoSymbol title="Guest at CEEALAR" />
+                </div>
               </div>
 
               <div
@@ -196,16 +205,18 @@ const Timeline = () => {
                   "bg-yellow-200 col-start-2 row-start-14 rounded-sm",
                   hasAnimal && "h-1/2",
                 )}
-              ></div>
+              />
 
               <div
                 className={clsx(
-                  "bg-amber-200 col-start-3 row-start-14 col-end-5 text-black p-2 rounded-sm",
+                  "bg-amber-300 col-start-3 row-start-14 col-end-5 text-black rounded-sm p-1",
                   hasAnimal && "h-1/2",
                 )}
               >
-                Member of EA Hub, Vietnam
-                <InfoSymbol title="Member of EA Hub, Vietnam" />
+                <div className="flex items-start justify-between gap-1 h-full">
+                  <span className="truncate">Member of EA Hub</span>
+                  <InfoSymbol title="Member of EA Hub, Vietnam" />
+                </div>
               </div>
             </>
           )}
