@@ -1,6 +1,7 @@
 import policyPdf from "../assets/policy_case.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
+import Divider from "./Divider";
 
 const PolicyCase = () => {
   return (
@@ -9,7 +10,7 @@ const PolicyCase = () => {
         Animal Welfare Enforcement in the UK: Risk-Based and Technology-led
         Approaches
       </h1>
-      <hr className="border-t border-yellow-200" />
+      <Divider />
 
       <a
         href={policyPdf}

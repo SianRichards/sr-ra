@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import Divider from "./Divider";
 
 const articles = [
   {
@@ -45,7 +46,7 @@ const Faunalytics = () => {
   return (
     <div className="flex flex-col gap-3 p-2">
       <h1 className="font-bold text-xl">Faunalytics Research Summaries</h1>
-      <hr className="border-t border-yellow-200" />
+      <Divider />
 
       <ul className="flex flex-col gap-5 text-justify ">
         {articles.map(({ title, subheading, link }) => {
