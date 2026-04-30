@@ -1,12 +1,23 @@
 import { Button as HeadlessUIButton } from "@headlessui/react";
+import clsx from "clsx";
+import type { ReactNode, ButtonHTMLAttributes } from "react";
 
-const Button = ({ label, onClick }: { label: string; onClick: () => void }) => {
+type Props = {
+  children: ReactNode;
+  className?: string;
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+
+const Button = ({ children, className, ...props }: Props) => {
   return (
     <HeadlessUIButton
-      className="bg-yellow-200 text-teal-800 px-2 rounded-md cursor-pointer"
-      onClick={onClick}
+      className={clsx(
+        "bg-yellow-200 text-teal-800 font-semibold px-3 py-1 rounded-md cursor-pointer",
+        "hover:bg-yellow-300 transition",
+        className,
+      )}
+      {...props}
     >
-      {label}
+      {children}
     </HeadlessUIButton>
   );
 };

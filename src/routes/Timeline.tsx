@@ -67,12 +67,8 @@ const Timeline = () => {
             />
           );
         })}
-        <Button
-          label="Reset"
-          onClick={() => setVisibleCategories(categories)}
-        />
-
-        <Button label="Remove all" onClick={() => setVisibleCategories([])} />
+        <Button onClick={() => setVisibleCategories(categories)}>Reset</Button>
+        <Button onClick={() => setVisibleCategories([])}>Remove all</Button>
       </div>
       <div className="flex-1 overflow-y-auto pr-2">
         <div className="grid w-full grid-cols-13 auto-rows-[60px] gap-y-3 pb-3">

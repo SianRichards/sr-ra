@@ -4,8 +4,9 @@ import {
   DialogPanel,
   DialogTitle,
 } from "@headlessui/react";
-import Button from "./Button";
 import Divider from "./Divider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 type ModalProps = {
   title: string;
@@ -15,16 +16,26 @@ type ModalProps = {
 
 const Modal = ({ title, description, onClose }: ModalProps) => {
   return (
-    <Dialog open={true} onClose={onClose} className="relative z-50">
+    <Dialog
+      open={true}
+      onClose={onClose}
+      className="relative z-50 text-xl text-yellow-200"
+    >
       <div className="fixed inset-0 flex items-center justify-center p-4">
-        <div className="bg-gray-100/90 w-auto h-auto max-w-1/3 p-3 rounded-md">
+        <div className="bg-teal-900/90 max-w-1/3 px-4 py-2 rounded-md border border-yellow-200">
           <DialogPanel>
-            <DialogTitle className="font-bold">{title}</DialogTitle>
+            <div className="flex justify-between">
+              <DialogTitle className="font-bold">{title}</DialogTitle>
+              <FontAwesomeIcon
+                icon={faXmark}
+                onClick={onClose}
+                className=" cursor-pointer"
+              />
+            </div>
             <Divider />
             <Description className="my-2 text-justify">
               {description}
             </Description>
-            <Button label="Close" onClick={onClose} />
           </DialogPanel>
         </div>
       </div>
