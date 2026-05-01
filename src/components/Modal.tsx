@@ -20,7 +20,7 @@ const Modal = ({ identifier, title, description, onClose }: ModalProps) => {
     <Dialog
       open={true}
       onClose={onClose}
-      className="relative z-50 text-xl text-yellow-200"
+      className="relative z-50 text-yellow-200"
     >
       <div className="fixed inset-0 flex items-center justify-center p-4">
         <div className="bg-teal-900/90 max-w-1/3 px-4 py-2 rounded-md border border-yellow-200">
@@ -30,7 +30,7 @@ const Modal = ({ identifier, title, description, onClose }: ModalProps) => {
               <FontAwesomeIcon
                 icon={faXmark}
                 onClick={onClose}
-                className="pl-2 pt-1 cursor-pointer"
+                className="pl-2 py-1 cursor-pointer"
               />
             </div>
             <Divider />

@@ -2,6 +2,23 @@
 
 @import "tailwindcss";
 
-* {
-  font-family: "Lekton", sans-serif;
+@layer components {
+  body {
+    font-family: "Lekton", sans-serif;
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  nav {
+    font-size: 1.25rem
+  }
+  button {
+    font-size: 1.25rem
+  }
 }

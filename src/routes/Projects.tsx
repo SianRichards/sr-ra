@@ -4,11 +4,13 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import PolicyCase from "../components/PolicyCase";
 import Faunalytics from "../components/Faunalytics";
+import Header from "../components/Header";
 
 const Projects = () => {
   return (
     <div className="flex flex-col h-screen text-yellow-200 pl-2">
-      <TabGroup className="flex flex-col flex-1 mt-3 text-xl min-h-0">
+      <Header className="text-center">Projects</Header>
+      <TabGroup className="flex flex-col flex-1 min-h-0">
         <TabList className="flex gap-2">
           <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 px-3">
             Policy Case

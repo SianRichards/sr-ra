@@ -5,11 +5,11 @@ import Divider from "./Divider";
 
 const PolicyCase = () => {
   return (
-    <div className="flex flex-col gap-3 text-xl p-2">
-      <h1 className="font-bold">
+    <div className="flex flex-col gap-3 p-2">
+      <h2>
         Animal Welfare Enforcement in the UK: Risk-Based and Technology-led
         Approaches
-      </h1>
+      </h2>
       <Divider />
 
       <a

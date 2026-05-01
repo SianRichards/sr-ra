@@ -45,7 +45,7 @@ const articles = [
 const Faunalytics = () => {
   return (
     <div className="flex flex-col gap-3 p-2">
-      <h1 className="font-bold text-xl">Faunalytics Research Summaries</h1>
+      <h2>Faunalytics Research Summaries</h2>
       <Divider />
 
       <ul className="flex flex-col gap-5 text-justify ">
