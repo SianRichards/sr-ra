@@ -242,9 +242,22 @@ export const modalContents = [
   },
   {
     identifier: "Guest at CEEALAR",
-    title: "Guest at CEEALAR",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    title:
+      "Guest CEEALAR | EA Hotel, Blackpool | December 2025 - February 2026",
+    description: (
+      <ul className="list-disc pl-4">
+        <li>
+          Spent two months at CEEALAR after leaving my job to explore effective
+          altruism and career direction
+        </li>
+        <li>Volunteered in software development for FarmKind</li>
+        <li>Worked on the Electric Sheep FutureKind fellowship course</li>
+        <li>Networked with members of the EA community</li>
+        <li>
+          Through connections made there, was invited to EA Hub in Vietnam
+        </li>
+      </ul>
+    ),
   },
   {
     identifier: "Member of EA Hub, Vietnam",
