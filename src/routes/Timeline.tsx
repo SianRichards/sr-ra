@@ -72,8 +72,15 @@ const Timeline = () => {
         <Button onClick={() => setVisibleCategories(categories)}>Reset</Button>
         <Button onClick={() => setVisibleCategories([])}>Remove all</Button>
       </div>
-      <div className="flex-1 overflow-y-auto pr-2 text-[14px]">
+      <div className="relative flex-1 overflow-y-auto pr-2 text-[14px]">
         <div className="grid w-full grid-cols-13 auto-rows-[60px] gap-y-3 pb-3">
+          {activeModal && (
+            <Modal
+              title={activeModal.title}
+              description={activeModal.description}
+              onClose={closeModal}
+            />
+          )}
           <div></div>
           {months.map((m, index) => (
             <div key={index} className="sticky top-0 z-10 bg-teal-700">
@@ -87,14 +94,6 @@ const Timeline = () => {
               </div>
             );
           })}
-
-          {activeModal && (
-            <Modal
-              title={activeModal.title}
-              description={activeModal.description}
-              onClose={closeModal}
-            />
-          )}
 
           {hasEdu && (
             <>
