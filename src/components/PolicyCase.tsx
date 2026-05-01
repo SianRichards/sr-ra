@@ -14,6 +14,7 @@ const PolicyCase = () => {
 
       <a
         href={policyPdf}
+        target="_blank"
         className="w-fit inline-flex items-center gap-2 border px-3 py-1 rounded-md bg-yellow-200 text-teal-800"
       >
         <FontAwesomeIcon icon={faFilePdf} />

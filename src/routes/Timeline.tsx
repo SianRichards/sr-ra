@@ -52,7 +52,7 @@ const Timeline = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen text-yellow-200 px-6 pb-6">
+    <div className="flex flex-col h-screen text-yellow-200 px-6 py-4">
       <Header className="text-center">
         {visibleCategories.length === 0
           ? "you've destroyed my life's work... i hope you're pleased with yourself"
@@ -73,7 +73,7 @@ const Timeline = () => {
         <Button onClick={() => setVisibleCategories([])}>Remove all</Button>
       </div>
       <div className="relative flex-1 overflow-y-auto pr-2 text-[14px]">
-        <div className="grid w-full grid-cols-13 auto-rows-[60px] gap-y-3 pb-3">
+        <div className="grid w-full grid-cols-13 auto-rows-[50px] gap-y-3 pb-3">
           {activeModal && (
             <Modal
               title={activeModal.title}

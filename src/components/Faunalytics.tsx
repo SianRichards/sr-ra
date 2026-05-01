@@ -54,7 +54,7 @@ const Faunalytics = () => {
             <li key={link}>
               <span className="font-bold block">{title}</span>
               <p>{subheading}</p>
-              <a href={link}>
+              <a href={link} target="_blank">
                 Read article <FontAwesomeIcon icon={faLink} />
               </a>
             </li>
