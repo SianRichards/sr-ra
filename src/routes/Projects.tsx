@@ -1,6 +1,3 @@
-// tech: mum's website
-// policy/writing: policy case, link to my research paper summaries
-
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import PolicyCase from "../components/PolicyCase";
 import Faunalytics from "../components/Faunalytics";
@@ -11,12 +8,12 @@ const Projects = () => {
     <div className="flex flex-col h-screen text-yellow-200 pl-2">
       <Header className="text-center">Projects</Header>
       <TabGroup className="flex flex-col flex-1 min-h-0">
-        <TabList className="flex gap-2">
-          <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 px-3">
-            Policy Case
+        <TabList className="flex gap-2 font-semibold">
+          <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 pt-1 px-4">
+            <h2>Policy Case</h2>
           </Tab>
-          <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 px-3">
-            Faunalytics
+          <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 px-4 pt-1">
+            <h2>Faunalytics</h2>
           </Tab>
         </TabList>
 

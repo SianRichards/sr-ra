@@ -5,20 +5,25 @@
 @layer components {
   body {
     font-family: "Lekton", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem; /* 16px baseline */
   }
+
   h1 {
-    font-size: 2rem;
+    font-size: 1.8rem; /* 32px */
     font-weight: 700;
   }
+
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* 24px */
     font-weight: 600;
   }
+
   nav {
-    font-size: 1.25rem
+    font-size: 1.1rem; /* 18px */
   }
+
   button {
-    font-size: 1.25rem
+    font-size: 1rem;
+    font-weight: 500;
   }
 }

@@ -72,7 +72,7 @@ const Timeline = () => {
         <Button onClick={() => setVisibleCategories(categories)}>Reset</Button>
         <Button onClick={() => setVisibleCategories([])}>Remove all</Button>
       </div>
-      <div className="flex-1 overflow-y-auto pr-2">
+      <div className="flex-1 overflow-y-auto pr-2 text-[14px]">
         <div className="grid w-full grid-cols-13 auto-rows-[60px] gap-y-3 pb-3">
           <div></div>
           {months.map((m, index) => (
@@ -134,7 +134,7 @@ const Timeline = () => {
                 <InfoSymbol title="Full-stack Software Engineer at MadeTech" />
               </div>
               <div className="bg-emerald-300 row-start-10 col-start-2 col-end-8 rounded-sm"></div>
-              <div className="bg-green-500 row-start-11 col-start-12 col-end-14 text-black p-2 rounded-sm z-10">
+              <div className="bg-green-500 row-start-11 col-start-12 col-end-14 text-black pt-1 pl-1 rounded-sm z-10">
                 Software Developer at Outlook Energy
                 <InfoSymbol title="Software Developer at Outlook Energy" />
               </div>
@@ -182,12 +182,8 @@ const Timeline = () => {
           {hasEA && (
             <>
               <div className="bg-teal-200/60 col-start-2 col-end-13 row-start-13 text-black p-2 rounded-sm">
-                <div className="flex items-start justify-between gap-1">
-                  <span className="truncate">
-                    Co-organiser at Effective Altruism Bristol
-                  </span>
-                  <InfoSymbol title="Co-organiser at Effective Altruism Bristol" />
-                </div>
+                Co-organiser at Effective Altruism Bristol
+                <InfoSymbol title="Co-organiser at Effective Altruism Bristol" />
               </div>
 
               <div
@@ -215,10 +211,8 @@ const Timeline = () => {
                   hasAnimal && "h-1/2",
                 )}
               >
-                <div className="flex items-start justify-between gap-1 h-full">
-                  <span className="truncate">Member of EA Hub</span>
-                  <InfoSymbol title="Member of EA Hub, Vietnam" />
-                </div>
+                <span className="truncate">Member of EA Hub</span>
+                <InfoSymbol title="Member of EA Hub, Vietnam" />
               </div>
             </>
           )}

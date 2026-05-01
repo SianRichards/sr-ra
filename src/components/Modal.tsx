@@ -9,13 +9,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 type ModalProps = {
-  identifier: string;
   title: string;
   description: any;
   onClose: () => void;
 };
 
-const Modal = ({ identifier, title, description, onClose }: ModalProps) => {
+const Modal = ({ title, description, onClose }: ModalProps) => {
   return (
     <Dialog
       open={true}
