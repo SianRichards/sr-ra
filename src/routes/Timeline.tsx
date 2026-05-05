@@ -68,6 +68,7 @@ const Timeline = () => {
     colStart,
     colEnd,
     zIndex,
+    className,
     conditionalClass,
   }: {
     children: string;
@@ -77,12 +78,14 @@ const Timeline = () => {
     colStart: number;
     colEnd: number;
     zIndex?: number;
+    className?: string;
     conditionalClass?: string | boolean;
   }) => {
     return (
       <div
         className={clsx(
-          "text-black md:p-2 p-1 ml-2 rounded-sm text-[13px] flex items-center gap-1",
+          "text-black p-2 ml-2 rounded-sm text-[13px] flex items-center gap-1 md:flex-row",
+          className,
           bgColor,
           `row-start-${rowStart}`,
           `col-start-${colStart}`,
@@ -350,6 +353,7 @@ const Timeline = () => {
                 colStart={13}
                 colEnd={13}
                 bgColor="bg-pink-300"
+                className="flex flex-col justify-center"
                 infoTitle="FutureKind Fellow at Electric Sheep"
                 conditionalClass={hasEA && "h-1/2"}
               >
@@ -376,13 +380,14 @@ const Timeline = () => {
               >
                 Co-organiser at EA Bristol
               </TimelineEvent>
-
+              {/* mini 1 */}
               <TimelineEvent
                 rowStart={13}
                 colStart={13}
                 colEnd={13}
                 bgColor="bg-yellow-200"
                 infoTitle="Guest at CEEALAR"
+                className="flex flex-col justify-center"
                 conditionalClass={hasAnimal && "h-1/2 self-end"}
               >
                 Guest at CEEALAR
