@@ -134,7 +134,8 @@ const Timeline = () => {
           ? "you've destroyed my life's work... i hope you're pleased with yourself"
           : "My Career (and other activities)"}
       </Header>
-      <div className="flex gap-5 pt-3 ">
+
+      <div className="flex flex-wrap gap-2 md:gap-5 pt-3">
         {categories.map((c, index) => {
           return (
             <CheckBox
@@ -148,6 +149,7 @@ const Timeline = () => {
         <Button onClick={() => setVisibleCategories(categories)}>Reset</Button>
         <Button onClick={() => setVisibleCategories([])}>Remove all</Button>
       </div>
+
       <div className="relative flex-1 overflow-y-auto pr-2 md:text-[14px]">
         <div className="grid w-full grid-cols-[36px_repeat(12,minmax(0,1fr))] auto-rows-[50px] gap-y-3 pb-3">
           {activeModal && (
