@@ -58,7 +58,7 @@ const Timeline = () => {
           ? "you've destroyed my life's work... i hope you're pleased with yourself"
           : "My Career (and other activities)"}
       </Header>
-      <div className="flex gap-5 py-3 ">
+      <div className="flex gap-5 pt-3 ">
         {categories.map((c, index) => {
           return (
             <CheckBox
@@ -73,7 +73,7 @@ const Timeline = () => {
         <Button onClick={() => setVisibleCategories([])}>Remove all</Button>
       </div>
       <div className="relative flex-1 overflow-y-auto pr-2 text-[14px]">
-        <div className="grid w-full grid-cols-13 auto-rows-[50px] gap-y-3 pb-3">
+        <div className="grid w-full grid-cols-[36px_repeat(12,minmax(0,1fr))] auto-rows-[50px] gap-y-3 pb-3">
           {activeModal && (
             <Modal
               title={activeModal.title}
@@ -83,13 +83,19 @@ const Timeline = () => {
           )}
           <div></div>
           {months.map((m, index) => (
-            <div key={index} className="sticky top-0 z-10 bg-teal-700">
+            <div
+              key={index}
+              className="sticky top-0 z-10 text-center flex items-end justify-center bg-teal-700"
+            >
               {m}
             </div>
           ))}
           {years.map((y, index) => {
             return (
-              <div key={index} className={`row-${index + 2} col-1`}>
+              <div
+                key={index}
+                className={`row-${index + 2} col-1 pr-8 self-center`}
+              >
                 {y}
               </div>
             );
@@ -101,15 +107,15 @@ const Timeline = () => {
                 University
                 <InfoSymbol title="University" />
               </div>
-              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-3 rounded-sm"></div>
-              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-4 rounded-sm"></div>
-              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-5 rounded-sm"></div>
-              <div className="bg-indigo-200 col-start-2 col-end-8 row-start-6 rounded-sm"></div>
+              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-3 rounded-sm ml-2"></div>
+              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-4 rounded-sm ml-2"></div>
+              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-5 rounded-sm ml-2"></div>
+              <div className="bg-indigo-200 col-start-2 col-end-8 row-start-6 rounded-sm ml-2"></div>
               <div className="col-start-10 col-end-14 row-start-4 bg-cyan-200 text-black p-2 rounded-sm">
                 Year abroad
                 <InfoSymbol title="Year abroad" />
               </div>
-              <div className="bg-cyan-200 col-start-2 col-end-7 row-start-5 rounded-sm"></div>
+              <div className="bg-cyan-200 col-start-2 col-end-7 row-start-5 rounded-sm ml-2"></div>
             </>
           )}
 
@@ -123,22 +129,22 @@ const Timeline = () => {
                 Junior Developer in Test
                 <InfoSymbol title="Junior Developer in Test" />
               </div>
-              <div className="bg-orange-300 row-start-8 col-start-2 col-end-14 text-black p-2 rounded-sm">
+              <div className="bg-orange-300 row-start-8 col-start-2 col-end-14 text-black p-2 rounded-sm ml-2">
                 Software Developer at BookingLive
                 <InfoSymbol title="Software Developer at BookingLive" />
               </div>
-              <div className="bg-orange-300 row-start-9 col-start-2 col-end-8 rounded-sm"></div>
+              <div className="bg-orange-300 row-start-9 col-start-2 col-end-8 rounded-sm ml-2"></div>
               <div className="bg-emerald-300 row-start-9 col-start-8 col-end-14 text-black p-2 rounded-sm">
                 Full-stack Software Engineer at MadeTech
                 <InfoSymbol title="Full-stack Software Engineer at MadeTech" />
               </div>
-              <div className="bg-emerald-300 row-start-10 col-start-2 col-end-8 rounded-sm"></div>
+              <div className="bg-emerald-300 row-start-10 col-start-2 col-end-8 rounded-sm ml-2"></div>
               <div className="bg-green-500 row-start-11 col-start-12 col-end-14 text-black pt-1 pl-1 rounded-sm z-10">
                 Software Developer at Outlook Energy
                 <InfoSymbol title="Software Developer at Outlook Energy" />
               </div>
-              <div className="bg-green-500 row-start-12 col-start-2 col-end-14 rounded-sm"></div>
-              <div className="bg-green-500 row-start-13 col-start-2 col-end-13 rounded-sm"></div>
+              <div className="bg-green-500 row-start-12 col-start-2 col-end-14 rounded-sm ml-2"></div>
+              <div className="bg-green-500 row-start-13 col-start-2 col-end-13 rounded-sm ml-2"></div>
             </>
           )}
           {hasOther && (
@@ -147,13 +153,13 @@ const Timeline = () => {
                 Gap year in Latin America
                 <InfoSymbol title="Gap year in Latin America" />
               </div>
-              <div className="bg-red-300 row-start-11 col-start-2 col-end-8 rounded-sm"></div>
+              <div className="bg-red-300 row-start-11 col-start-2 col-end-8 rounded-sm ml-2"></div>
             </>
           )}
 
           {hasAnimal && (
             <>
-              <div className="bg-purple-300/60 col-start-2 col-end-14 row-start-11 text-black p-2 rounded-sm">
+              <div className="bg-purple-300/60 col-start-2 col-end-14 row-start-11 text-black p-2 rounded-sm ml-2">
                 Research Paper Summariser at Faunalytics
                 <InfoSymbol title="Research Paper Summariser at Faunalytics" />
               </div>
@@ -171,7 +177,7 @@ const Timeline = () => {
 
               <div
                 className={clsx(
-                  "bg-pink-300 col-start-2 col-end-4 row-start-14 rounded-sm",
+                  "bg-pink-300 col-start-2 col-end-4 row-start-14 rounded-sm ml-2",
                   hasEA && "h-1/2 self-end",
                 )}
               ></div>
@@ -180,7 +186,7 @@ const Timeline = () => {
 
           {hasEA && (
             <>
-              <div className="bg-teal-200/60 col-start-2 col-end-13 row-start-13 text-black p-2 rounded-sm">
+              <div className="bg-teal-200/60 col-start-2 col-end-13 row-start-13 text-black p-2 rounded-sm ml-2">
                 Co-organiser at Effective Altruism Bristol
                 <InfoSymbol title="Co-organiser at Effective Altruism Bristol" />
               </div>
@@ -199,7 +205,7 @@ const Timeline = () => {
 
               <div
                 className={clsx(
-                  "bg-yellow-200 col-start-2 row-start-14 rounded-sm",
+                  "bg-yellow-200 col-start-2 row-start-14 rounded-sm ml-2",
                   hasAnimal && "h-1/2",
                 )}
               />
