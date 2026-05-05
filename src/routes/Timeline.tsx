@@ -41,18 +41,91 @@ const Timeline = () => {
 
   const closeModal = () => setActiveModal(null);
 
-  const InfoSymbol = ({ title }: { title: string }) => {
+  const InfoSymbol = ({
+    title,
+    className,
+  }: {
+    title: string;
+    className?: string;
+  }) => {
     return (
       <FontAwesomeIcon
-        className="pt-1 pl-1 opacity-30 cursor-pointer text-gray-700"
+        className={clsx(
+          "flex-0 opacity-30 md:ml-1 cursor-pointer text-gray-700",
+          className,
+        )}
         icon={faCircleInfo}
         onClick={() => handleModal(title)}
       />
     );
   };
 
+  const TimelineEvent = ({
+    children,
+    infoTitle,
+    bgColor,
+    rowStart,
+    colStart,
+    colEnd,
+    zIndex,
+    conditionalClass,
+  }: {
+    children: string;
+    infoTitle: string;
+    bgColor: string;
+    rowStart: number;
+    colStart: number;
+    colEnd: number;
+    zIndex?: number;
+    conditionalClass?: string | boolean;
+  }) => {
+    return (
+      <div
+        className={clsx(
+          "text-black md:p-2 p-1 ml-2 rounded-sm text-[13px] flex items-center gap-1",
+          bgColor,
+          `row-start-${rowStart}`,
+          `col-start-${colStart}`,
+          `col-end-${colEnd}`,
+          zIndex && `z-${zIndex}`,
+          conditionalClass,
+        )}
+      >
+        <span className="truncate">{children}</span>
+        <InfoSymbol title={infoTitle} />
+      </div>
+    );
+  };
+
+  const TimelineBar = ({
+    bgColor,
+    rowStart,
+    colStart,
+    colEnd,
+    conditionalClass,
+  }: {
+    bgColor: string;
+    rowStart: number;
+    colStart: number;
+    colEnd: number;
+    conditionalClass?: string | boolean;
+  }) => {
+    return (
+      <div
+        className={clsx(
+          "rounded-sm ml-2",
+          bgColor,
+          `row-start-${rowStart}`,
+          `col-start-${colStart}`,
+          `col-end-${colEnd}`,
+          conditionalClass,
+        )}
+      />
+    );
+  };
+
   return (
-    <div className="flex flex-col h-screen text-yellow-200 px-6 py-4">
+    <div className="flex flex-col h-screen text-yellow-200 md:px-6 px-4 py-4">
       <Header className="text-center">
         {visibleCategories.length === 0
           ? "you've destroyed my life's work... i hope you're pleased with yourself"
@@ -72,7 +145,7 @@ const Timeline = () => {
         <Button onClick={() => setVisibleCategories(categories)}>Reset</Button>
         <Button onClick={() => setVisibleCategories([])}>Remove all</Button>
       </div>
-      <div className="relative flex-1 overflow-y-auto pr-2 text-[14px]">
+      <div className="relative flex-1 overflow-y-auto pr-2 md:text-[14px]">
         <div className="grid w-full grid-cols-[36px_repeat(12,minmax(0,1fr))] auto-rows-[50px] gap-y-3 pb-3">
           {activeModal && (
             <Modal
@@ -85,7 +158,10 @@ const Timeline = () => {
           {months.map((m, index) => (
             <div
               key={index}
-              className="sticky top-0 z-10 text-center flex items-end justify-center bg-teal-700"
+              className={clsx(
+                "sticky top-0 z-10 text-center flex items-end justify-center bg-teal-700 md:text-yellow-200",
+                index % 2 && "text-teal-700",
+              )}
             >
               {m}
             </div>
@@ -103,122 +179,231 @@ const Timeline = () => {
 
           {hasEdu && (
             <>
-              <div className="col-start-11 col-end-14 row-start-2 bg-indigo-200 text-black p-2 rounded-sm">
+              <TimelineEvent
+                rowStart={2}
+                colStart={11}
+                colEnd={14}
+                bgColor="bg-indigo-200"
+                infoTitle="University"
+              >
                 University
-                <InfoSymbol title="University" />
-              </div>
-              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-3 rounded-sm ml-2"></div>
-              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-4 rounded-sm ml-2"></div>
-              <div className="bg-indigo-200 col-start-2 col-end-14 row-start-5 rounded-sm ml-2"></div>
-              <div className="bg-indigo-200 col-start-2 col-end-8 row-start-6 rounded-sm ml-2"></div>
-              <div className="col-start-10 col-end-14 row-start-4 bg-cyan-200 text-black p-2 rounded-sm">
+              </TimelineEvent>
+
+              <TimelineEvent
+                rowStart={7}
+                colStart={3}
+                colEnd={6}
+                bgColor="bg-green-200"
+                infoTitle="Trainee at coding bootcamp"
+              >
+                Trainee at coding bootcamp
+              </TimelineEvent>
+
+              <TimelineBar
+                rowStart={3}
+                colStart={2}
+                colEnd={14}
+                bgColor="bg-indigo-200"
+              />
+              <TimelineBar
+                rowStart={4}
+                colStart={2}
+                colEnd={14}
+                bgColor="bg-indigo-200"
+              />
+              <TimelineBar
+                rowStart={5}
+                colStart={2}
+                colEnd={14}
+                bgColor="bg-indigo-200"
+              />
+              <TimelineBar
+                rowStart={6}
+                colStart={2}
+                colEnd={8}
+                bgColor="bg-indigo-200"
+              />
+              <TimelineEvent
+                rowStart={4}
+                colStart={10}
+                colEnd={14}
+                bgColor="bg-cyan-200"
+                infoTitle="Trainee at coding bootcamp"
+              >
                 Year abroad
-                <InfoSymbol title="Year abroad" />
-              </div>
-              <div className="bg-cyan-200 col-start-2 col-end-7 row-start-5 rounded-sm ml-2"></div>
+              </TimelineEvent>
+              <TimelineBar
+                rowStart={5}
+                colStart={2}
+                colEnd={7}
+                bgColor="bg-cyan-200"
+              />
             </>
           )}
 
           {hasSoftware && (
             <>
-              <div className="bg-green-200 row-start-7 col-start-3 col-end-6 text-black p-2 rounded-sm">
+              <TimelineEvent
+                rowStart={7}
+                colStart={3}
+                colEnd={6}
+                bgColor="bg-green-200"
+                infoTitle="Trainee at coding bootcamp"
+              >
                 Trainee at coding bootcamp
-                <InfoSymbol title="Trainee at coding bootcamp" />
-              </div>
-              <div className="bg-yellow-200 row-start-7 col-start-8 col-end-14 text-black p-2 rounded-sm">
+              </TimelineEvent>
+              <TimelineEvent
+                rowStart={7}
+                colStart={8}
+                colEnd={14}
+                bgColor="bg-yellow-200"
+                infoTitle="Trainee at coding bootcamp"
+              >
                 Junior Developer in Test
-                <InfoSymbol title="Junior Developer in Test" />
-              </div>
-              <div className="bg-orange-300 row-start-8 col-start-2 col-end-14 text-black p-2 rounded-sm ml-2">
+              </TimelineEvent>
+              <TimelineEvent
+                rowStart={8}
+                colStart={2}
+                colEnd={14}
+                bgColor="bg-orange-200"
+                infoTitle="Trainee at coding bootcamp"
+              >
                 Software Developer at BookingLive
-                <InfoSymbol title="Software Developer at BookingLive" />
-              </div>
-              <div className="bg-orange-300 row-start-9 col-start-2 col-end-8 rounded-sm ml-2"></div>
-              <div className="bg-emerald-300 row-start-9 col-start-8 col-end-14 text-black p-2 rounded-sm">
+              </TimelineEvent>
+              <TimelineBar
+                rowStart={9}
+                colStart={2}
+                colEnd={8}
+                bgColor="bg-orange-200"
+              />
+              <TimelineEvent
+                rowStart={9}
+                colStart={8}
+                colEnd={14}
+                bgColor="bg-emerald-300"
+                infoTitle="Full-stack Software Engineer at MadeTech"
+              >
                 Full-stack Software Engineer at MadeTech
-                <InfoSymbol title="Full-stack Software Engineer at MadeTech" />
-              </div>
-              <div className="bg-emerald-300 row-start-10 col-start-2 col-end-8 rounded-sm ml-2"></div>
-              <div className="bg-green-500 row-start-11 col-start-12 col-end-14 text-black pt-1 pl-1 rounded-sm z-10">
+              </TimelineEvent>
+              <TimelineBar
+                rowStart={10}
+                colStart={2}
+                colEnd={8}
+                bgColor="bg-emerald-300"
+              />
+              <TimelineEvent
+                rowStart={11}
+                colStart={12}
+                colEnd={14}
+                bgColor="bg-green-500"
+                infoTitle="Software Developer at Outlook Energy"
+              >
                 Software Developer at Outlook Energy
-                <InfoSymbol title="Software Developer at Outlook Energy" />
-              </div>
-              <div className="bg-green-500 row-start-12 col-start-2 col-end-14 rounded-sm ml-2"></div>
-              <div className="bg-green-500 row-start-13 col-start-2 col-end-13 rounded-sm ml-2"></div>
+              </TimelineEvent>
+              <TimelineBar
+                rowStart={12}
+                colStart={2}
+                colEnd={14}
+                bgColor="bg-green-500"
+              />
+              <TimelineBar
+                rowStart={13}
+                colStart={2}
+                colEnd={13}
+                bgColor="bg-green-500"
+              />
             </>
           )}
           {hasOther && (
             <>
-              <div className="bg-red-300 row-start-10 col-start-8 col-end-14 text-black p-2 rounded-sm">
+              <TimelineEvent
+                rowStart={10}
+                colStart={8}
+                colEnd={14}
+                bgColor="bg-red-300"
+                infoTitle="Gap year in Latin America"
+              >
                 Gap year in Latin America
-                <InfoSymbol title="Gap year in Latin America" />
-              </div>
-              <div className="bg-red-300 row-start-11 col-start-2 col-end-8 rounded-sm ml-2"></div>
+              </TimelineEvent>
+              <TimelineBar
+                rowStart={11}
+                colStart={2}
+                colEnd={8}
+                bgColor="bg-red-300"
+              />
             </>
           )}
 
           {hasAnimal && (
             <>
-              <div className="bg-purple-300/60 col-start-2 col-end-14 row-start-11 text-black p-2 rounded-sm ml-2">
-                Research Paper Summariser at Faunalytics
-                <InfoSymbol title="Research Paper Summariser at Faunalytics" />
-              </div>
-              <div
-                className={clsx(
-                  "bg-pink-300 col-start-13 row-start-13 text-black rounded-sm p-1",
-                  hasEA && "h-1/2",
-                )}
+              <TimelineEvent
+                rowStart={11}
+                colStart={2}
+                colEnd={14}
+                bgColor="bg-purple-300/60"
+                infoTitle="Research Paper Summariser"
               >
-                <div className="flex items-start justify-between gap-1 h-full">
-                  <span className="truncate">FutureKind Fellowship</span>
-                  <InfoSymbol title="FutureKind Fellow at Electric Sheep" />
-                </div>
-              </div>
-
-              <div
-                className={clsx(
-                  "bg-pink-300 col-start-2 col-end-4 row-start-14 rounded-sm ml-2",
-                  hasEA && "h-1/2 self-end",
-                )}
-              ></div>
+                Research Paper Summariser
+              </TimelineEvent>
+              <TimelineEvent
+                rowStart={13}
+                colStart={13}
+                colEnd={13}
+                bgColor="bg-pink-300"
+                infoTitle="FutureKind Fellow at Electric Sheep"
+                conditionalClass={hasEA && "h-1/2"}
+              >
+                FutureKind Fellowship
+              </TimelineEvent>
+              <TimelineBar
+                rowStart={14}
+                colStart={2}
+                colEnd={4}
+                bgColor="bg-pink-300"
+                conditionalClass={hasEA && "h-1/2 self-end"}
+              />
             </>
           )}
 
           {hasEA && (
             <>
-              <div className="bg-teal-200/60 col-start-2 col-end-13 row-start-13 text-black p-2 rounded-sm ml-2">
-                Co-organiser at Effective Altruism Bristol
-                <InfoSymbol title="Co-organiser at Effective Altruism Bristol" />
-              </div>
-
-              <div
-                className={clsx(
-                  "bg-yellow-200 col-start-13 row-start-13 text-black rounded-sm p-1",
-                  hasAnimal && "h-1/2 self-end",
-                )}
+              <TimelineEvent
+                rowStart={13}
+                colStart={2}
+                colEnd={13}
+                bgColor="bg-teal-200/60"
+                infoTitle="Co-organiser at EA Bristol"
               >
-                <div className="flex items-start justify-between gap-1 h-full">
-                  <span className="truncate">Guest at CEEALAR</span>
-                  <InfoSymbol title="Guest at CEEALAR" />
-                </div>
-              </div>
+                Co-organiser at EA Bristol
+              </TimelineEvent>
 
-              <div
-                className={clsx(
-                  "bg-yellow-200 col-start-2 row-start-14 rounded-sm ml-2",
-                  hasAnimal && "h-1/2",
-                )}
+              <TimelineEvent
+                rowStart={13}
+                colStart={13}
+                colEnd={13}
+                bgColor="bg-yellow-200"
+                infoTitle="Guest at CEEALAR"
+                conditionalClass={hasAnimal && "h-1/2 self-end"}
+              >
+                Guest at CEEALAR
+              </TimelineEvent>
+              <TimelineBar
+                rowStart={14}
+                colStart={2}
+                colEnd={3}
+                bgColor="bg-yellow-200"
+                conditionalClass={hasAnimal && "h-1/2"}
               />
-
-              <div
-                className={clsx(
-                  "bg-amber-300 col-start-3 row-start-14 col-end-5 text-black rounded-sm p-1",
-                  hasAnimal && "h-1/2",
-                )}
+              <TimelineEvent
+                rowStart={14}
+                colStart={3}
+                colEnd={5}
+                bgColor="bg-amber-300"
+                infoTitle="Member of EA Hub"
+                conditionalClass={hasAnimal && "h-1/2"}
               >
-                <span className="truncate">Member of EA Hub</span>
-                <InfoSymbol title="Member of EA Hub, Vietnam" />
-              </div>
+                Member of EA Hub
+              </TimelineEvent>
             </>
           )}
         </div>
