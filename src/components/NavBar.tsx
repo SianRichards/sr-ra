@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavBar = () => {
   return (
-    <nav className="flex flex-col h-full w-1/5 bg-yellow-200 p-3 border-r-8 border-teal-700">
+    <nav className="hidden md:flex flex-col h-full md:w-1/5 bg-yellow-200 p-3 border-r-8 border-teal-700">
       <Header>Sian Richards://</Header>
       <div className="flex flex-col gap-2 ">
         <NavLink to="/">
