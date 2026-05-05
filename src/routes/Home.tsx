@@ -15,8 +15,8 @@ const Home = () => {
           </p>
         </header>
 
-        <div className="flex flex-1 gap-4 lg:gap-6 lg:mt-8 min-h-0">
-          <section className="w-2/3 max-w-2xl flex flex-col gap-4 lg:gap-6">
+        <div className="flex flex-col lg:flex-row flex-1 gap-4 lg:gap-6 lg:mt-8 min-h-0">
+          <section className="order-2 lg:order-1 w-full lg:w-2/3 max-w-2xl flex flex-col gap-4 lg:gap-6">
             {/* Intro */}
             <div className="bg-teal-900/70 p-4 rounded-md border border-yellow-200">
               <h2 className="mb-2">About this site</h2>
@@ -86,12 +86,12 @@ const Home = () => {
             </div> */}
           </section>
 
-          <aside className="w-1/3 flex flex-col gap-3 max-w-xs h-fit sticky top-8">
+          <aside className="order-1 lg:order-2 w-full lg:w-1/3 flex flex-col items-center lg:items-start gap-3 h-fit lg:sticky lg:top-8 mt-2 md:mt-0">
             <NavLink
               to="/career-timeline"
               className={({ isActive }) =>
                 clsx(
-                  "p-3 border rounded-md bg-teal-900/60 hover:bg-teal-800/80 transition",
+                  "p-3 border rounded-md bg-teal-900/60 hover:bg-teal-800/80 transition w-full",
                   isActive && "border-yellow-200",
                 )
               }
@@ -103,7 +103,7 @@ const Home = () => {
               to="/projects"
               className={({ isActive }) =>
                 clsx(
-                  "p-3 border rounded-md bg-teal-900/60 hover:bg-teal-800/80 transition",
+                  "p-3 border rounded-md bg-teal-900/60 hover:bg-teal-800/80 transition w-full",
                   isActive && "border-yellow-200",
                 )
               }

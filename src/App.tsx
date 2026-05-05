@@ -17,8 +17,8 @@ function App() {
     <div className="relative h-screen w-screen flex flex-col md:flex-row text-teal-700">
       {/* Desktop navbar */}
       <NavBar />
-      
-      <div className="md:hidden absolute top-4 left-4 z-50">
+
+      <div className="md:hidden fixed top-4 left-4 z-50">
         <button
           onClick={() => setIsOpen(true)}
           className="p-2 rounded-md text-yellow-300"
