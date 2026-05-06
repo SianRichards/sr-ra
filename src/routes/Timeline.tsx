@@ -103,7 +103,7 @@ const Timeline = () => {
     );
   };
 
-  const TimelineBar = ({
+const TimelineBar = ({
     bgColor,
     rowStart,
     colStart,
@@ -121,11 +121,13 @@ const Timeline = () => {
         className={clsx(
           "rounded-sm ml-2",
           bgColor,
-          `row-start-${rowStart}`,
-          `col-start-${colStart}`,
-          `col-end-${colEnd}`,
           conditionalClass,
         )}
+        style={{
+          gridRowStart: rowStart,
+          gridColumnStart: colStart,
+          gridColumnEnd: colEnd,
+        }}
       />
     );
   };
