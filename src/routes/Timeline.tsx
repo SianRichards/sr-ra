@@ -129,13 +129,16 @@ const Timeline = () => {
 
   return (
     <div className="flex flex-col h-screen text-yellow-200 md:px-6 px-4 py-4">
-      <Header className="text-center">
-        {visibleCategories.length === 0
-          ? "you've destroyed my life's work... i hope you're pleased with yourself"
-          : "My Career (and other activities)"}
+      <Header
+        className={clsx(
+          "text-center",
+          visibleCategories.length === 0 && "line-through",
+        )}
+      >
+        Career timeline
       </Header>
 
-      <div className="flex flex-wrap gap-2 md:gap-5 pt-3">
+      <div className="flex flex-wrap gap-2 md:gap-5 pt-3 mb-2 md:m-0">
         {categories.map((c, index) => {
           return (
             <CheckBox

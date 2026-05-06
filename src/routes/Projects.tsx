@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <div className="flex flex-col h-screen text-yellow-200 px-6 py-4">
       <Header className="text-center mb-2">Projects</Header>
-      <TabGroup className="flex flex-col flex-1 min-h-0">
+      <TabGroup className="flex flex-col flex-1 min-h-0 mt-2">
         <TabList className="flex gap-2 font-semibold">
           <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 pt-1 px-4">
             <h2>Policy Case</h2>

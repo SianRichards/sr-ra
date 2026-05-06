@@ -166,7 +166,7 @@ export const modalContents = [
     ),
   },
   {
-    identifier: "Research Paper Summariser at Faunalytics",
+    identifier: "Research Paper Summariser",
     title: "Volunteer Writer | Faunalytics (remote) | January 2023 – July 2024",
     description: (
       <ul className="list-disc pl-4">
@@ -198,7 +198,7 @@ export const modalContents = [
     ),
   },
   {
-    identifier: "Co-organiser at Effective Altruism Bristol",
+    identifier: "Co-organiser at EA Bristol",
     title: "Organiser | EA Bristol | January 2025 – November 2025",
     description: (
       <ul className="list-disc pl-4">
@@ -260,7 +260,7 @@ export const modalContents = [
     ),
   },
   {
-    identifier: "Member of EA Hub, Vietnam",
+    identifier: "Member of EA Hub",
     title: "EA hub | Da Nang, Vietnam | February 2026 – April 2026",
     description: (
       <ul className="list-disc pl-4">
