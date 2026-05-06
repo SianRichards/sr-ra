@@ -6,10 +6,10 @@ import Divider from "./Divider";
 const PolicyCase = () => {
   return (
     <div className="flex flex-col gap-3 p-2">
-      <h2>
+      <h3>
         Animal Welfare Enforcement in the UK: Risk-Based and Technology-led
         Approaches
-      </h2>
+      </h3>
       <Divider />
 
       <a

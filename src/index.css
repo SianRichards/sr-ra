@@ -18,6 +18,11 @@
     font-weight: 600;
   }
 
+  h3 {
+    font-size: 1.2rem; /* 24px */
+    font-weight: 600;
+  }
+
   nav {
     font-size: 1.1rem; /* 18px */
   }

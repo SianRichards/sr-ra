@@ -42,14 +42,7 @@ export const modalContents = [
     identifier: "University",
     title:
       "BA Philosophy with Psychology (First Class) | University of Warwick, Coventry | 2014 – 2018",
-    description: (
-      <ul className="list-disc pl-4">
-        <li>
-          Modules included Social Cognition (91%), Statistical Methods for
-          Psychology (74%) and Symbolic Logic (72%)`
-        </li>
-      </ul>
-    ),
+    description: <></>,
   },
   {
     identifier: "Year abroad",
@@ -57,10 +50,46 @@ export const modalContents = [
     description: (
       <ul className="list-disc pl-4">
         <li>
-          Completed two Master’s level courses: Behavioural Economics and
-          Consumer Behaviour in Digital Environments
+          Completed Master's-level courses in Behavioural Economics and Consumer
+          Behaviour in Digital Environments.
         </li>
-        <li>Achieved upper intermediate level (B2.1) in the German language</li>
+        <li>Achieved B2.1 (upper intermediate) German language proficiency.</li>
+      </ul>
+    ),
+  },
+  {
+    identifier: "English Tutor",
+    title: `Online English Tutor | Landi English, Hangzhou, China (working remotely) | August 2018 – December 2018`,
+    description: (
+      <ul className="list-disc pl-4">
+        <li>
+          Taught English to Chinese students across multiple proficiency levels.
+        </li>
+        <li>
+          Quickly adapted to unfamiliar software and managed variable
+          scheduling.
+        </li>
+        <li>Maintained 280+ four- or five-star parent ratings.</li>
+      </ul>
+    ),
+  },
+  {
+    identifier: "Administrative Officer",
+    title: `Administrative Officer | Public Health England (PHE), Bristol | December 2018 – February 2019`,
+    description: (
+      <ul className="list-disc pl-4">
+        <li>
+          Temporary role with permanent position offered; declined to pursue
+          technology bootcamp.
+        </li>
+        <li>
+          Managed confidential patient data across inbound infection reports.
+        </li>
+        <li>Assessed and triaged reports by clinical urgency.</li>
+        <li>
+          Liaised with medical staff to communicate prioritised findings via PHE
+          reporting systems and direct communication.
+        </li>
       </ul>
     ),
   },
@@ -72,7 +101,7 @@ export const modalContents = [
       <ul className="list-disc pl-4">
         <li>
           Completed a 12-week intensive course focused on frontend development
-          with TypeScript, SCSS and React
+          with TypeScript, SCSS and React.
         </li>
         <li>
           Collaborated on client project, contributing features such as
@@ -93,14 +122,18 @@ export const modalContents = [
       "Junior Software Developer in Test | Bud Systems, Bristol | July 2019 – December 2019",
     description: (
       <ul className="list-disc pl-4">
-        <li>Built end-to-end test suites with Cypress and TypeScript.</li>
         <li>
-          Researched and presented testing framework option which was adopted
-          company-wide.
+          Owned the testing framework decision independently: researched
+          options, pitched a recommendation, and secured company-wide adoption.
         </li>
         <li>
-          Led retrospectives and mentored junior testers during a month-long
-          handover.
+          Built the automated testing codebase in Cypress and TypeScript; set up
+          the structure and standards for the team to follow.
+        </li>
+        <li>
+          Trained two new developers on the testing system and TypeScript during
+          a month-long handover; ran regular meetings to support their
+          onboarding.
         </li>
       </ul>
     ),
@@ -136,12 +169,16 @@ export const modalContents = [
     description: (
       <ul className="list-disc pl-4">
         <li>
-          Frontend developer on a government project with the UK DVLA, using
-          React, Ruby on Rails, and test-driven development.
+          Developed features on a UK government project (DVLA) using React and
+          Ruby on Rails; regularly presented work and progress to stakeholders.
         </li>
         <li>
-          Facilitated weekly “learn and share” sessions for software engineers
-          and delivered an introduction to React workshop.
+          Facilitated weekly learning sessions for the engineering team and
+          delivered a React workshop.
+        </li>
+        <li>
+          Volunteered to lead team retrospectives and drove continuous
+          improvement discussions.
         </li>
       </ul>
     ),
@@ -190,8 +227,14 @@ export const modalContents = [
     description: (
       <ul className="list-disc pl-4">
         <li>
-          Helped to build two React-based platforms for energy traders,
-          transforming SQL data into interactive tables and visualisations.
+          Built interactive data platforms for energy traders using React and
+          TypeScript, translating complex datasets into visualisations and
+          dashboards that impacted trading decisions.
+        </li>
+        <li>
+          Owned frontend architecture for cash management module; took full
+          responsibility for feature design, implementation, and performance
+          optimisation across two major platform releases.
         </li>
         <li>Tech stack: React, TypeScript, JavaScript, Plotly, SQL, Python.</li>
       </ul>
@@ -204,16 +247,17 @@ export const modalContents = [
       <ul className="list-disc pl-4">
         <li>
           One of four core organisers running events for the Bristol effective
-          altruism (EA) group.
+          altruism group.
         </li>
         <li>
-          Co-delivered an “Intro to EA” talk, covering maximising the good you
-          can do and why that implies cause prioritisation based on scale (and
-          severity), neglectedness and solvability.
+          Co-delivered "Intro to EA" talk covering cause prioritisation
+          frameworks (scale, severity, neglectedness, solvability) and designed
+          accompanying handouts that made the concepts accessible to new
+          audiences.
         </li>
         <li>
-          Hosted monthly discussions of EA topics and regular socials to build
-          community engagement
+          Hosted monthly discussion events and regular socials to build
+          community engagement.
         </li>
       </ul>
     ),
@@ -221,21 +265,17 @@ export const modalContents = [
   {
     identifier: "FutureKind Fellow at Electric Sheep",
     title:
-      "Fellow | Electric Sheep Futurekind Fellowship (remote) | December 2025 – March 2026",
+      "Fellow | Electric Sheep Futurekind Fellowship (remote) | December 2024 – March 2026",
     description: (
       <ul className="list-disc pl-4">
         <li>
-          Completed weekly readings and written exercises on AI and animals
-          (e.g. precision livestock farming, animal communication and
-          longtermism).
+          Completed intensive fellowship on AI and animal welfare; produced
+          policy case study "Animal Welfare Enforcement in the UK: Evaluating
+          Risk-based and Technology-led Approaches."
         </li>
         <li>
-          Wrote a policy case entitled Animal Welfare Enforcement in the UK:
-          Evaluating Risk-based and Technology-led Approaches.
-        </li>
-        <li>
-          One of 12 individuals chosen to present their project at the
-          end-of-course showcase.
+          Selected as one of 12 fellows to present project at end-of-course
+          showcase.
         </li>
       </ul>
     ),
@@ -243,19 +283,15 @@ export const modalContents = [
   {
     identifier: "Guest at CEEALAR",
     title:
-      "Guest CEEALAR | EA Hotel, Blackpool | December 2025 - February 2026",
+      "Guest | CEEALAR, EA Hotel, Blackpool | December 2024 – February 2026",
     description: (
       <ul className="list-disc pl-4">
         <li>
-          Spent two months at CEEALAR after leaving my job to explore effective
-          altruism and career direction
+          Transitioned from software development to focus on animal advocacy
+          policy research.
         </li>
-        <li>Volunteered in software development for FarmKind</li>
-        <li>Worked on the Electric Sheep FutureKind fellowship course</li>
-        <li>Networked with members of the EA community</li>
-        <li>
-          Through connections made there, was invited to EA Hub in Vietnam
-        </li>
+        <li>Volunteered in software development for FarmKind.</li>
+        <li>Built connections across the EA community.</li>
       </ul>
     ),
   },

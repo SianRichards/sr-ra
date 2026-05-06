@@ -87,12 +87,14 @@ const Timeline = () => {
           "text-black p-2 ml-2 rounded-sm text-[13px] flex items-center gap-1 md:flex-row",
           className,
           bgColor,
-          `row-start-${rowStart}`,
-          `col-start-${colStart}`,
-          `col-end-${colEnd}`,
-          zIndex && `z-${zIndex}`,
           conditionalClass,
         )}
+        style={{
+          gridRowStart: rowStart,
+          gridColumnStart: colStart,
+          gridColumnEnd: colEnd,
+          ...(zIndex && { zIndex }),
+        }}
       >
         <span className="truncate">{children}</span>
         <InfoSymbol title={infoTitle} />
@@ -167,7 +169,7 @@ const Timeline = () => {
             <div
               key={index}
               className={clsx(
-                "sticky top-0 z-10 text-center flex items-end justify-center bg-teal-700 md:text-yellow-200",
+                "sticky top-0 z-10 flex items-end pl-2 bg-teal-700 md:text-yellow-200",
                 index % 2 && "text-teal-700",
               )}
             >
@@ -288,7 +290,7 @@ const Timeline = () => {
                 rowStart={9}
                 colStart={8}
                 colEnd={14}
-                bgColor="bg-emerald-300"
+                bgColor="bg-lime-300"
                 infoTitle="Full-stack Software Engineer at MadeTech"
               >
                 Full-stack Software Engineer at MadeTech
@@ -297,7 +299,7 @@ const Timeline = () => {
                 rowStart={10}
                 colStart={2}
                 colEnd={8}
-                bgColor="bg-emerald-300"
+                bgColor="bg-lime-300"
               />
               <TimelineEvent
                 rowStart={11}
@@ -328,7 +330,7 @@ const Timeline = () => {
                 rowStart={10}
                 colStart={8}
                 colEnd={14}
-                bgColor="bg-red-300"
+                bgColor="bg-gray-300"
                 infoTitle="Gap year in Latin America"
               >
                 Gap year in Latin America
@@ -337,6 +339,30 @@ const Timeline = () => {
                 rowStart={11}
                 colStart={2}
                 colEnd={8}
+                bgColor="bg-gray-300"
+              />
+              <TimelineEvent
+                rowStart={6}
+                colStart={9}
+                colEnd={13}
+                bgColor="bg-emerald-400"
+                infoTitle="English Tutor"
+              >
+                English Tutor
+              </TimelineEvent>
+              <TimelineEvent
+                rowStart={6}
+                colStart={13}
+                colEnd={14}
+                bgColor="bg-red-300"
+                infoTitle="Administrative Officer"
+              >
+                Administrative Officer
+              </TimelineEvent>
+              <TimelineBar
+                rowStart={7}
+                colStart={2}
+                colEnd={3}
                 bgColor="bg-red-300"
               />
             </>
@@ -380,7 +406,7 @@ const Timeline = () => {
                 rowStart={13}
                 colStart={2}
                 colEnd={13}
-                bgColor="bg-teal-200/60"
+                bgColor="bg-taupe-300/70"
                 infoTitle="Co-organiser at EA Bristol"
               >
                 Co-organiser at EA Bristol
