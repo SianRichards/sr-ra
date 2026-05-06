@@ -14,7 +14,7 @@ function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen w-screen flex flex-col md:flex-row md:h-screen text-teal-700">
+    <div className="relative h-screen w-screen flex flex-col md:flex-row overflow-hidden text-teal-700">
       {/* Desktop navbar */}
       <NavBar />
 
