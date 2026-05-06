@@ -39,6 +39,7 @@ export const categories = [
 
 export const modalContents = [
   {
+    hideDivider: true,
     identifier: "University",
     title:
       "BA Philosophy with Psychology (First Class) | University of Warwick, Coventry | 2014 – 2018",
@@ -59,7 +60,7 @@ export const modalContents = [
   },
   {
     identifier: "English Tutor",
-    title: `Online English Tutor | Landi English, Hangzhou, China (working remotely) | August 2018 – December 2018`,
+    title: `English Tutor | Landi English, Remote | August 2018 – December 2018`,
     description: (
       <ul className="list-disc pl-4">
         <li>

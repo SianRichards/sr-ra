@@ -12,9 +12,10 @@ type ModalProps = {
   title: string;
   description: any;
   onClose: () => void;
+  hideDivider?: boolean;
 };
 
-const Modal = ({ title, description, onClose }: ModalProps) => {
+const Modal = ({ title, description, onClose, hideDivider }: ModalProps) => {
   return (
     <Dialog
       open={true}
@@ -33,7 +34,7 @@ const Modal = ({ title, description, onClose }: ModalProps) => {
               />
             </div>
 
-            <Divider />
+            {!hideDivider && <Divider />}
 
             <Description className="my-2 text-justify">
               {description}

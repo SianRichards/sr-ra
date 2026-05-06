@@ -14,6 +14,7 @@ const Timeline = () => {
     identifier: string;
     title: string;
     description: string;
+    hideDivider?: boolean;
   }>(null);
 
   const checkboxOnChange = (category: string) => {
@@ -161,6 +162,7 @@ const Timeline = () => {
             <Modal
               title={activeModal.title}
               description={activeModal.description}
+              hideDivider={activeModal.hideDivider}
               onClose={closeModal}
             />
           )}
@@ -306,6 +308,7 @@ const Timeline = () => {
                 colStart={12}
                 colEnd={14}
                 bgColor="bg-green-500"
+                className="z-50"
                 infoTitle="Software Developer at Outlook Energy"
               >
                 Software Developer at Outlook Energy
