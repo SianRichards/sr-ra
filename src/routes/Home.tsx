@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <div className="flex flex-col min-h-screen text-yellow-200 px-6 py-4">
+    <div className="flex flex-col h-dvh text-yellow-200 px-6 py-4">
       <div className="w-full max-w-6xl mx-auto flex flex-col">
         <header>
           <Header className="text-center" title={`Pronounced "Sh-ah-n"`}>

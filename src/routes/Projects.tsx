@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 const Projects = () => {
   return (
-    <div className="flex flex-col h-screen text-yellow-200 px-6 py-4">
+    <div className="flex flex-col h-dvh text-yellow-200 px-6 py-4">
       <Header className="text-center mb-2">Projects</Header>
       <TabGroup className="flex flex-col flex-1 min-h-0 mt-2">
         <TabList className="flex gap-2 font-semibold">

@@ -103,7 +103,7 @@ const Timeline = () => {
     );
   };
 
-const TimelineBar = ({
+  const TimelineBar = ({
     bgColor,
     rowStart,
     colStart,
@@ -118,11 +118,7 @@ const TimelineBar = ({
   }) => {
     return (
       <div
-        className={clsx(
-          "rounded-sm ml-2",
-          bgColor,
-          conditionalClass,
-        )}
+        className={clsx("rounded-sm ml-2", bgColor, conditionalClass)}
         style={{
           gridRowStart: rowStart,
           gridColumnStart: colStart,
@@ -133,7 +129,7 @@ const TimelineBar = ({
   };
 
   return (
-    <div className="flex flex-col h-screen text-yellow-200 md:px-6 px-4 py-4">
+    <div className="flex flex-col h-dvh text-yellow-200 px-4 md:px-6 pt-5 pb-7">
       <Header
         className={clsx(
           "text-center",
@@ -173,7 +169,7 @@ const TimelineBar = ({
             <div
               key={index}
               className={clsx(
-                "sticky top-0 z-10 flex items-end pl-2 bg-teal-700 md:text-yellow-200",
+                "sticky top-0 z-10 flex items-end pl-1 text-sm md:text-base md:pl-2 md:text-yellow-200 bg-teal-700",
                 index % 2 && "text-teal-700",
               )}
             >
@@ -361,6 +357,7 @@ const TimelineBar = ({
                 colEnd={14}
                 bgColor="bg-red-300"
                 infoTitle="Administrative Officer"
+                className="flex flex-col justify-center truncate"
               >
                 Administrative Officer
               </TimelineEvent>

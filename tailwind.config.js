@@ -6,6 +6,9 @@ export default {
       gridTemplateColumns: {
         13: "repeat(13, minmax(0, 1fr))",
       },
+      height: {
+        dvh: "100dvh",
+      },
     },
   },
   plugins: [],
