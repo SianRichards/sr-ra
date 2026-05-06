@@ -13,7 +13,7 @@ const Timeline = () => {
   const [activeModal, setActiveModal] = useState<null | {
     identifier: string;
     title: string;
-    description: string;
+    description: React.ReactNode;
     hideDivider?: boolean;
   }>(null);
 
