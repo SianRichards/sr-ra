@@ -4,8 +4,8 @@ import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <div className="flex flex-col h-dvh text-yellow-200 px-6 py-4">
-      <div className="w-full max-w-6xl mx-auto flex flex-col">
+    <div className="flex flex-col min-h-dvh text-yellow-200 px-6 py-4">
+      <div className="w-full max-w-6xl mx-auto flex flex-col mb-2">
         <header>
           <Header className="text-center" title={`Pronounced "Sh-ah-n"`}>
             Sian Richards
@@ -110,25 +110,8 @@ const Home = () => {
             >
               Projects (Policy + Research)
             </NavLink>
-
-            {/* <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                clsx(
-                  "p-3 border rounded-md bg-teal-900/60 hover:bg-teal-800/80 transition",
-                  isActive && "border-yellow-200",
-                )
-              }
-            >
-              Contact / Collaborate
-            </NavLink> */}
           </aside>
         </div>
-
-        {/* FOOTER */}
-        <footer className="mt-4  opacity-70">
-          UX aesthetic inspired by Windows '95'
-        </footer>
       </div>
     </div>
   );
