@@ -36,9 +36,10 @@ const Home = () => {
               <p className="text-justify ">
                 Sentience (the ability to feel pain and pleasure) is what
                 matters to me morally. I believe doing good fundamentally
-                involves alleviating suffering. I'm particularly focused on
-                farmed animals because I place more weight on tractability which
-                is higher relative to issues like wild animal suffering.
+                involves alleviating suffering and promoting wellbeing. I'm
+                particularly focused on farmed animals because I place more
+                weight on tractability which is currently higher relative to
+                issues like wild animal suffering.
               </p>
             </div>
 
@@ -54,14 +55,13 @@ const Home = () => {
 
             {/* Currently thinking about */}
             <div className="bg-teal-900/70 p-4 rounded-md border border-yellow-200">
-              <h2 className="font-bold mb-2">
-                What I'm currently thinking about
-              </h2>
-              <p className="text-justify ">
-                I'm interested in decapod crustacean welfare (particularly
-                killing methods) based on scale and severity of suffering. I'm
-                also exploring animal welfare enforcement as a bottleneck i.e.
-                how poor enforcement undermines policy improvements.
+              <h2 className="font-bold mb-2">What I’m currently exploring</h2>
+              <p className="text-justify">
+                I’m currently interested in questions around animal welfare,
+                particularly decapod crustacean welfare and the challenges of
+                policy enforcement. Generally, I’m interested in how
+                institutions and incentives shape real-world outcomes, and I’m
+                open to working across a range of impactful areas.
               </p>
             </div>
 

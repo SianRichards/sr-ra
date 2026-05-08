@@ -27,7 +27,7 @@ const PolicyCase = () => {
           <p>
             In 2024, only 2.2% of UK farms were inspected for animal welfare
             compliance, meaning the average farm faces inspection once every
-            14–45 years. Despite 28.4% of inspected farms breaching welfare
+            14 to 45 years. Despite 28.4% of inspected farms breaching welfare
             standards, enforcement action is rare: 55% of local authorities took
             no formal action when breaches were found. The problem stems from
             fragmented responsibility across multiple authorities, severe
@@ -50,7 +50,7 @@ const PolicyCase = () => {
             frequent unannounced visits while lower-risk farms are inspected
             less often. A pilot across selected local authorities would test
             whether this approach improves detection efficiency—finding more
-            breaches per inspection—without requiring additional resources,
+            breaches per inspection without requiring additional resources,
             though it works best alongside increased funding.
           </p>
         </li>
@@ -60,16 +60,15 @@ const PolicyCase = () => {
             Solution 2: Precision Livestock Farming for Continuous Monitoring
           </span>
           <p>
-            Precision livestock farming (PLF) technology—sensors, cameras, and
-            microphones—can generate real-time welfare data on animal activity,
-            health, and behavior. Rather than replacing inspections, PLF data
-            would function as a regulatory trigger: flagging welfare concerns
-            that warrant inspector investigation. In the short term, integration
-            with existing farm assurance schemes (like Red Tractor) offers
-            faster implementation. Long-term, government integration could
-            extend oversight to non-scheme farms, but only if accompanied by
-            transparency safeguards to prevent data misuse for surveillance or
-            efficiency-over-welfare optimisation.
+            Precision livestock farming (PLF) technology (e.g. sensors, cameras,
+            and microphones) can generate real-time welfare data on animal
+            activity, health, and behaviour. Rather than replacing inspections,
+            PLF data would function as a regulatory trigger: flagging welfare
+            concerns that warrant inspector investigation. In the short term,
+            integration with existing farm assurance schemes offers faster
+            implementation. Long-term, government integration could extend
+            oversight to non-scheme farms, but concerns regarding data misuse or
+            efficiency-over-welfare optimisation need to be considered.
           </p>
         </li>
       </ul>
