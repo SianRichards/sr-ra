@@ -6,7 +6,7 @@ import Divider from "./Divider";
 const PolicyCase = () => {
   return (
     <div className="flex flex-col gap-3 p-2">
-      <h3>
+      <h3 className="text-lg">
         Animal Welfare Enforcement in the UK: Risk-Based and Technology-led
         Approaches
       </h3>
@@ -26,8 +26,8 @@ const PolicyCase = () => {
           <span className="font-bold block">The Enforcement Problem</span>
           <p>
             In 2024, only 2.2% of UK farms were inspected for animal welfare
-            compliance, meaning the average farm faces inspection once every
-            14 to 45 years. Despite 28.4% of inspected farms breaching welfare
+            compliance, meaning the average farm faces inspection once every 14
+            to 45 years. Despite 28.4% of inspected farms breaching welfare
             standards, enforcement action is rare: 55% of local authorities took
             no formal action when breaches were found. The problem stems from
             fragmented responsibility across multiple authorities, severe
