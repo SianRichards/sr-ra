@@ -310,4 +310,34 @@ export const modalContents = [
       </ul>
     ),
   },
+  {
+    identifier: "Volunteer at APJ",
+    title: "Volunteer | APJ & CellAg Deutschland | June 2026 - present",
+    description: (
+      <ul className="list-disc pl-4">
+        <li>Evaluating and scoping potential AI tool builds.</li>
+        <li>
+          Estimating time and effort for AI projects, and checking new ideas
+          against what already exists in the space.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    identifier: "Research Assistant",
+    title:
+      "Research Assistant | Centre for Aquaculture Progress | July 2026 - present",
+    description: (
+      <ul className="list-disc pl-4">
+        <li>
+          Extracting and adjudicating fish welfare data against a detailed
+          evidence schema.
+        </li>
+        <li>
+          Calibrating rulings with a co-adjudicator to keep judgments consistent
+          across a large dataset.
+        </li>
+      </ul>
+    ),
+  },
 ];

@@ -399,6 +399,28 @@ const Timeline = () => {
                 bgColor="bg-pink-300"
                 conditionalClass={hasEA && "h-1/2 self-end"}
               />
+              <TimelineEvent
+                rowStart={14}
+                colStart={7}
+                colEnd={9}
+                bgColor="bg-cyan-500"
+                className="flex flex-col justify-center"
+                infoTitle="Volunteer at APJ"
+                conditionalClass={hasEA && "h-1/2"}
+              >
+                Volunteer
+              </TimelineEvent>
+              <TimelineEvent
+                rowStart={14}
+                colStart={8}
+                colEnd={9}
+                bgColor="bg-violet-300"
+                className="flex flex-col justify-center"
+                infoTitle="Research Assistant"
+                conditionalClass={hasEA && "h-1/2 self-end"}
+              >
+                Research Assistant
+              </TimelineEvent>
             </>
           )}
 
