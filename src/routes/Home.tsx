@@ -18,8 +18,8 @@ const Home = () => {
         <div className="flex flex-col lg:flex-row flex-1 gap-4 lg:gap-6 lg:mt-8 min-h-0">
           <section className="order-2 lg:order-1 w-full lg:w-2/3 max-w-2xl flex flex-col gap-4 lg:gap-6">
             {/* Intro */}
-            <div className="bg-teal-900/70 p-4 rounded-md border border-yellow-200">
-              <h2 className="mb-2">About this site</h2>
+            <div className="bg-teal-800 p-4 rounded-md border-2 border-yellow-200">
+              <h2 className="font-bold mb-2">About this site</h2>
               <p className="text-justify">
                 I'm involved in effective altruism and interested in finding the
                 most effective ways to reduce animal suffering. This site is a
