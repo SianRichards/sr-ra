@@ -422,7 +422,7 @@ const Timeline = () => {
                 rowStart={13}
                 colStart={2}
                 colEnd={13}
-                bgColor="bg-taupe-300/70"
+                bgColor="bg-orange-300/70"
                 infoTitle="Co-organiser at EA Bristol"
               >
                 Co-organiser at EA Bristol
