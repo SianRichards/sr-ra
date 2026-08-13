@@ -199,16 +199,6 @@ const Timeline = () => {
                 University
               </TimelineEvent>
 
-              <TimelineEvent
-                rowStart={7}
-                colStart={3}
-                colEnd={6}
-                bgColor="bg-green-200"
-                infoTitle="Trainee at coding bootcamp"
-              >
-                Trainee at coding bootcamp
-              </TimelineEvent>
-
               <TimelineBar
                 rowStart={3}
                 colStart={2}
