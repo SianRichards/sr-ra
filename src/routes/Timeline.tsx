@@ -52,7 +52,7 @@ const Timeline = () => {
     return (
       <FontAwesomeIcon
         className={clsx(
-          "flex-0 opacity-30 md:ml-1 cursor-pointer text-gray-700",
+          "flex-0 opacity-60 hover:opacity-100 transition-opacity md:ml-1 cursor-pointer text-gray-700",
           className,
         )}
         icon={faCircleInfo}
@@ -97,7 +97,9 @@ const Timeline = () => {
           ...(zIndex && { zIndex }),
         }}
       >
-        <span className="truncate">{children}</span>
+        <span className="truncate" title={children}>
+          {children}
+        </span>
         <InfoSymbol title={infoTitle} />
       </div>
     );
