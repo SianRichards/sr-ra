@@ -15,7 +15,7 @@ const Projects = () => {
         <TabList className="flex md:gap-2 gap-1 font-semibold mr-2 md:mr-0">
           {tabs.map((t) => {
             return (
-              <Tab className="data-selected:bg-gray-500 cursor-pointer rounded-t-md bg-gray-800 pt-1 md:px-4 px-1 flex-1 min-w-0 md:flex-none">
+              <Tab className="border border-b-0 border-yellow-200 data-selected:bg-teal-900 text-yellow-200/70 data-selected:text-yellow-200 cursor-pointer rounded-t-md bg-teal-800 pt-1 md:px-4 px-1 flex-1 min-w-0 md:flex-none">
                 <h2 className="text-[11px] sm:text-sm md:text-lg whitespace-nowrap overflow-hidden text-ellipsis">
                   {t}
                 </h2>
@@ -24,7 +24,7 @@ const Projects = () => {
           })}
         </TabList>
 
-        <TabPanels className="bg-gray-500 flex-1 min-h-0 overflow-y-auto rounded-b-md p-2 mr-2 rounded-r-md mb-3">
+        <TabPanels className="bg-teal-900 text-yellow-200 border border-yellow-200 flex-1 min-h-0 overflow-y-auto rounded-b-md p-2 mr-2 rounded-r-md mb-3">
           <TabPanel>
             <PolicyCase />
           </TabPanel>
