@@ -48,7 +48,7 @@ const Faunalytics = () => {
       <h3 className="text-lg">Faunalytics Research Summaries</h3>
       <Divider />
 
-      <ul className="flex flex-col gap-5 text-justify ">
+      <ul className="flex flex-col gap-5 text-justify max-w-3xl">
         {articles.map(({ title, subheading, link }) => {
           return (
             <li key={link}>

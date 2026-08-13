@@ -9,7 +9,7 @@ const CEA = () => {
         Cost-Effectiveness Analysis: Electrical Stunning for Crab Slaughter
       </h3>
       <Divider />
-      <div className="flex flex-col gap-3 text-justify">
+      <div className="flex flex-col gap-3 text-justify max-w-3xl">
         <p>
           This spreadsheet models the welfare cost-effectiveness of introducing
           electrical stunning at the point of crab slaughter in the UK. It

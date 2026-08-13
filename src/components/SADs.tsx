@@ -9,7 +9,7 @@ const SADs = () => {
         SADs Chart: Visualising Farmed Animal Suffering
       </h3>
       <Divider />
-      <div className="flex flex-col gap-3 text-justify">
+      <div className="flex flex-col gap-3 text-justify max-w-3xl">
         <p>
           SADs (Suffering-Adjusted Days) are a way of measuring the total burden
           of suffering experienced by farmed animals, analogous to DALYs
