@@ -1,6 +1,7 @@
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
+import clsx from "clsx";
 
 const MobileNavBar = ({ onClose }: { onClose: () => void }) => {
   return (
@@ -12,15 +13,27 @@ const MobileNavBar = ({ onClose }: { onClose: () => void }) => {
         className="self-end cursor-pointer pt-2 pr-2"
       />
       <div className="flex flex-col gap-2 pl-2">
-        <NavLink to="/" onClick={onClose}>
+        <NavLink
+          to="/"
+          onClick={onClose}
+          className={({ isActive }) => clsx(isActive && "font-bold")}
+        >
           {({ isActive }) => <span>Home {isActive ? "<<" : ">>"}</span>}
         </NavLink>
-        <NavLink to="/career-timeline" onClick={onClose}>
+        <NavLink
+          to="/career-timeline"
+          onClick={onClose}
+          className={({ isActive }) => clsx(isActive && "font-bold")}
+        >
           {({ isActive }) => (
             <span>Career timeline {isActive ? "<<" : ">>"}</span>
           )}
         </NavLink>
-        <NavLink to="/projects" onClick={onClose}>
+        <NavLink
+          to="/projects"
+          onClick={onClose}
+          className={({ isActive }) => clsx(isActive && "font-bold")}
+        >
           {({ isActive }) => <span>Projects {isActive ? "<<" : ">>"}</span>}
         </NavLink>
       </div>

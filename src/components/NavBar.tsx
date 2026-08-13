@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import clsx from "clsx";
 import Header from "./Header";
 import { faLinkedin, faDiscord } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -9,15 +10,39 @@ const NavBar = () => {
     <nav className="hidden md:flex flex-col h-full md:w-1/5 bg-yellow-200 p-3 border-r-8 border-teal-700">
       <Header>Sian Richards://</Header>
       <div className="flex flex-col gap-2 ">
-        <NavLink to="/">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            clsx(
+              "w-fit hover:text-teal-900 transition-colors",
+              isActive && "font-bold",
+            )
+          }
+        >
           {({ isActive }) => <span>Home {isActive ? "<<" : ">>"}</span>}
         </NavLink>
-        <NavLink to="/career-timeline">
+        <NavLink
+          to="/career-timeline"
+          className={({ isActive }) =>
+            clsx(
+              "w-fit hover:text-teal-900 transition-colors",
+              isActive && "font-bold",
+            )
+          }
+        >
           {({ isActive }) => (
             <span>Career timeline {isActive ? "<<" : ">>"}</span>
           )}
         </NavLink>
-        <NavLink to="/projects">
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            clsx(
+              "w-fit hover:text-teal-900 transition-colors",
+              isActive && "font-bold",
+            )
+          }
+        >
           {({ isActive }) => <span>Projects {isActive ? "<<" : ">>"}</span>}
         </NavLink>
       </div>
