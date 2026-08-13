@@ -31,4 +31,24 @@
     font-size: 1rem;
     font-weight: 500;
   }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-yellow-200) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-yellow-200);
+    border-radius: 9999px;
+    border: 2px solid var(--color-teal-700);
+  }
 }
