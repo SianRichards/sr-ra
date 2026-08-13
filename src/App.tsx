@@ -3,7 +3,6 @@ import Home from "./routes/Home";
 import NavBar from "./components/NavBar";
 import Timeline from "./routes/Timeline";
 import Projects from "./routes/Projects";
-import Contact from "./routes/Contact";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -43,7 +42,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/career-timeline" element={<Timeline />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
     </div>
