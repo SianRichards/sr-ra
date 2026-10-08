@@ -394,7 +394,7 @@ const Timeline = () => {
               <TimelineEvent
                 rowStart={14}
                 colStart={7}
-                colEnd={9}
+                colEnd={11}
                 bgColor="bg-cyan-500"
                 className="flex flex-col justify-center"
                 infoTitle="Volunteer at APJ"
@@ -405,7 +405,7 @@ const Timeline = () => {
               <TimelineEvent
                 rowStart={14}
                 colStart={8}
-                colEnd={9}
+                colEnd={11}
                 bgColor="bg-violet-300"
                 className="flex flex-col justify-center"
                 infoTitle="Research Assistant"

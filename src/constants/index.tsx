@@ -315,10 +315,11 @@ export const modalContents = [
     title: "Volunteer | APJ & CellAg Deutschland | June 2026 - present",
     description: (
       <ul className="list-disc pl-4">
-        <li>Evaluating and scoping potential AI tool builds.</li>
+        <li>Building an AI-powered chatbot for APJ's career guidance.</li>
+        <li>Automating analytics in Google sheets.</li>
         <li>
-          Estimating time and effort for AI projects, and checking new ideas
-          against what already exists in the space.
+          Providing AI and technical support for Sentient Futures mentees'
+          projects.
         </li>
       </ul>
     ),
@@ -326,16 +327,20 @@ export const modalContents = [
   {
     identifier: "Research Assistant",
     title:
-      "Research Assistant | Centre for Aquaculture Progress | July 2026 - present",
+      "Research Assistant (contractor) | Centre for Aquaculture Progress | July 2026 - September 2026",
     description: (
       <ul className="list-disc pl-4">
         <li>
-          Extracting and adjudicating fish welfare data against a detailed
-          evidence schema.
+          Three-month project focused on developing behavioural welfare
+          indicators for farmed Atlantic salmon and rainbow trout.
         </li>
         <li>
-          Calibrating rulings with a co-adjudicator to keep judgments consistent
-          across a large dataset.
+          Reviewed 258 AI-extracted entries on fish welfare against source
+          papers, flagging errors and missing data.
+        </li>
+        <li>
+          Aligned rulings with a co-adjudicator to keep judgments consistent
+          across the dataset.
         </li>
       </ul>
     ),
